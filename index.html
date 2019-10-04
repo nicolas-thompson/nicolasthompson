@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nicolas Thompson</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  <script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-42280854-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<style>
+  #home{-webkit-filter: invert(100%);}
+  [v-cloak] > * { display:none }
+  [v-cloak]::before { content: "" }
+</style>
+</head>
+<body>
+ <div id="app" v-cloak>
+   <v-app light>
+    <v-content>
+      <section>
+        <v-parallax src="assets/hero.jpeg" height="1000">
+          <v-layout
+            column
+            align-center
+            justify-center
+            class="white--text"
+          >
+            <img id="home" src="assets/home.svg" alt="Vuetify.js" height="200">
+            <h1 class="white--text mb-2 display-1 text-xs-center">Nicolas Thompson</h1>
+            <div class="subheading mb-3 text-xs-center">Software Engineer</div>
+            <v-btn
+              class="blue lighten-2 mt-5"
+              dark
+              large
+              href="https://github.com/nicolas-thompson"
+            >
+              Repositories
+            </v-btn>
+            <v-btn class="blue lighten-2 mt-5" dark large href="assets/Nicolas_Thompson.pdf">
+              History
+            </v-btn>
+          </v-layout>
+        </v-parallax>
+      </section>
+    </v-content>
+  </v-app>
+ </div>
+ <script src="https://unpkg.com/vue/dist/vue.js"></script>
+ <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+ <script>
+   new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+    })
+ </script>
+</body>
+</html>
